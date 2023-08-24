@@ -4,4 +4,23 @@ output: html_document
 date: "2023-08-24"
 ---
 
-read
+```{r}
+library(tidyverse)
+library(dplyr)
+```
+
+
+```{r}
+url <- "https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto19/CasosActivosPorComuna_std.csv"
+Casos_Activos <- read_csv(url)
+```
+
+
+```{r}
+library(dplyr)
+comuna_50_casos <- Casos_Activos %>%
+  filter(`Casos activos` > Poblacion * 50 / 100000)
+cumple_criterio <- nrow(comuna_50_casos) / nrow(Casos_Activos)
+cat("La proporción de comunas con más de 50 casos por cada 100,000 habitantes es:", cumple_criterio, "\n")
+```
+
