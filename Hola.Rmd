@@ -1,0 +1,7 @@
+---
+title: "Analisis"
+output: html_document
+date: "2023-08-24"
+---
+
+read
