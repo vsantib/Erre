@@ -357,7 +357,8 @@ display: none;
 </div>
 
 
-<p>Buscamos datos de la siguiente [URL] (<a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv" class="uri">https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv</a>)</p>
+<div id="buscamos-datos-de-la-siguiente-url-httpsraw.githubusercontent.comrfordatasciencetidytuesdaymasterdata20202020-08-18plants.csv" class="section level2">
+<h2>Buscamos datos de la siguiente [URL] (<a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv" class="uri">https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv</a>)</h2>
 <pre class="r"><code>Plantas_Chile &lt;- &quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv&quot;
 Plantas &lt;- read.csv(Plantas_Chile)</code></pre>
 <pre class="r"><code>library(dplyr)</code></pre>
@@ -370,20 +371,16 @@ Plantas &lt;- read.csv(Plantas_Chile)</code></pre>
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
 <pre class="r"><code>Plantas_extintas_chile &lt;- Plantas |&gt;
-  filter(country == &quot;Chile&quot;) </code></pre>
+  filter(country == &quot;Chile&quot;) |&gt;
+  select(binomial_name, country, continent)</code></pre>
 <pre class="r"><code>print(Plantas_extintas_chile)</code></pre>
-<pre><code>##             binomial_name country     continent           group year_last_seen
-## 1 Santalum fernandezianum   Chile South America Flowering Plant      1900-1919
-## 2        Sophora toromiro   Chile South America Flowering Plant      1920-1939
-##   threat_AA threat_BRU threat_RCD threat_ISGD threat_EPM threat_CC threat_HID
-## 1         0          1          0           0          0         0          0
-## 2         0          0          0           0          0         0          0
-##   threat_P threat_TS threat_NSM threat_GE threat_NA action_LWP action_SM
-## 1        0         0          0         0         0          0         0
-## 2        0         0          0         0         1          0         0
-##   action_LP action_RM action_EA action_NA   red_list_category
-## 1         0         0         0         1             Extinct
-## 2         0         0         0         1 Extinct in the Wild</code></pre>
+<pre><code>##             binomial_name country     continent
+## 1 Santalum fernandezianum   Chile South America
+## 2        Sophora toromiro   Chile South America</code></pre>
+<p>Plantas_extintas_SA</p>
+<pre class="r"><code>Plantas_extintas_SA &lt;- Plantas |&gt;
+  filter(continent == &quot;South America&quot;)</code></pre>
+</div>
 
 
 
