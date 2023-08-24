@@ -379,7 +379,93 @@ Plantas &lt;- read.csv(Plantas_Chile)</code></pre>
 ## 2        Sophora toromiro   Chile South America</code></pre>
 <p>Plantas_extintas_SA</p>
 <pre class="r"><code>Plantas_extintas_SA &lt;- Plantas |&gt;
-  filter(continent == &quot;South America&quot;)</code></pre>
+  filter(continent == &quot;South America&quot;)|&gt;
+  select(binomial_name, country, continent)
+print(Plantas_extintas_SA)</code></pre>
+<pre><code>##                          binomial_name             country     continent
+## 1             Aechmea cymosopaniculata           Venezuela South America
+## 2                Aetheolaena hypoleuca             Ecuador South America
+## 3                Aetheolaena ledifolia             Ecuador South America
+## 4            Aetheolaena pichinchensis             Ecuador South America
+## 5                  Amsinckia marginata             Ecuador South America
+## 6              Andropogon benthamianus             Ecuador South America
+## 7                      Aster quitensis             Ecuador South America
+## 8                      Baccharis fusca             Ecuador South America
+## 9                     Begonia eciliata Trinidad and Tobago South America
+## 10                  Blutaparon rigidum             Ecuador South America
+## 11                  Brugmansia arborea                Peru South America
+## 12                    Brugmansia aurea            Colombia South America
+## 13                 Brugmansia insignis                Peru South America
+## 14                Brugmansia sanguinea                Peru South America
+## 15               Brugmansia suaveolens              Brazil South America
+## 16               Brugmansia versicolor             Ecuador South America
+## 17              Brugmansia vulcanicola            Colombia South America
+## 18               Campomanesia lundiana              Brazil South America
+## 19                Casearia quinduensis            Colombia South America
+## 20       Centropogon brachysiphoniatus             Ecuador South America
+## 21                 Ceratostema pensile             Ecuador South America
+## 22                    Cereus estevesii              Brazil South America
+## 23           Chrysophyllum januariense              Brazil South America
+## 24                     Clitoria andrei             Ecuador South America
+## 25               Ctenitis pallatangana             Ecuador South America
+## 26                 Cyperus multifolius             Ecuador South America
+## 27                   Delilia inelegans             Ecuador South America
+## 28             Devillea flagelliformis              Brazil South America
+## 29 Discocactus subterraneo-proliferans              Brazil South America
+## 30                    Egletes humifusa             Ecuador South America
+## 31               Elaphandra retroflexa             Ecuador South America
+## 32            Elaphoglossum gracilipes             Ecuador South America
+## 33           Elaphoglossum polytrichum             Ecuador South America
+## 34              Epidendrum lanceolatum Trinidad and Tobago South America
+## 35                  Eriocaulon caesium Trinidad and Tobago South America
+## 36                      Eugenia albida             Ecuador South America
+## 37              Eugenia guayaquilensis             Ecuador South America
+## 38               Flabellidium spinosum             Bolivia South America
+## 39                   Galaxaura barbata             Ecuador South America
+## 40             Gaultheria stereophylla             Ecuador South America
+## 41             Gomidesia cambessedeana              Brazil South America
+## 42                   Guzmania lepidota             Ecuador South America
+## 43                 Guzmania poortmanii             Ecuador South America
+## 44                    Guzmania striata             Ecuador South America
+## 45                  Licania caldasiana            Colombia South America
+## 46                    Magnolia dixonii             Ecuador South America
+## 47                     Magnolia wolfii            Colombia South America
+## 48                  Manettia canescens             Ecuador South America
+## 49                    Manettia holwayi             Ecuador South America
+## 50                Matelea ecuadorensis             Ecuador South America
+## 51                Maxillaria broadwayi Trinidad and Tobago South America
+## 52                Maytenus manabiensis             Ecuador South America
+## 53                  Melpomene brevipes             Ecuador South America
+## 54                 Miconia longisetosa             Ecuador South America
+## 55                      Miconia scabra             Ecuador South America
+## 56                   Mikania iserniana             Ecuador South America
+## 57                   Mikania seemannii             Ecuador South America
+## 58               Pentagonia orthoneura             Ecuador South America
+## 59                  Peperomia dauleana             Ecuador South America
+## 60                   Peperomia petraea             Ecuador South America
+## 61              Philodendron balaoanum             Ecuador South America
+## 62                  Phycodrina elegans             Ecuador South America
+## 63                 Phyllanthus mimicus Trinidad and Tobago South America
+## 64                  Piper molliusculum             Ecuador South America
+## 65                  Polygala quitensis             Ecuador South America
+## 66                Pouteria stenophylla              Brazil South America
+## 67                   Pradosia argentea                Peru South America
+## 68                  Pradosia glaziovii              Brazil South America
+## 69                    Pradosia mutisii            Colombia South America
+## 70              Prestonia schumanniana             Ecuador South America
+## 71                  Roupala tobagensis Trinidad and Tobago South America
+## 72             Santalum fernandezianum               Chile South America
+## 73                 Senecio leucopeplus           Argentina South America
+## 74                     Sicyos villosus             Ecuador South America
+## 75              Siphocampylus loxensis             Ecuador South America
+## 76                Solanum semicoalitum             Ecuador South America
+## 77                    Sophora toromiro               Chile South America
+## 78            Sphyrospermum spruceanum             Ecuador South America
+## 79                   Steriphoma urbani             Ecuador South America
+## 80                Terminalia acuminata              Brazil South America
+## 81              Themistoclesia inflata             Ecuador South America
+## 82            Tournefortia obtusiflora             Ecuador South America
+## 83                Viburnum divaricatum             Ecuador South America</code></pre>
 </div>
 
 

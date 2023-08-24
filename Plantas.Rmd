@@ -23,7 +23,9 @@ print(Plantas_extintas_chile)
 Plantas_extintas_SA
 ```{r}
 Plantas_extintas_SA <- Plantas |>
-  filter(continent == "South America")
+  filter(continent == "South America")|>
+  select(binomial_name, country, continent)
+print(Plantas_extintas_SA)
 
 ```
 
